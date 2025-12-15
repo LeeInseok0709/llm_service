@@ -98,10 +98,14 @@ async def run_comparison(user_prompt: str):
 # --- 메인 실행 ---
 
 if __name__ == "__main__":
-    question = "AI 기술이 미래 교육에 미칠 긍정적 영향과 부정적 영향을 3가지씩 설명해줘."
     print("--- LLM 비교 서비스 실행 ---")
+    
+    # question을 사용자 입력으로 받도록 수정
+    question = input(">> 비교할 AI 질문을 입력하세요: ")
 
-    results = asyncio.run(run_comparison(question))
-
-    # 이후 비교/선택 로직 추가 가능
-    # print(results)
+    if question.strip():
+        results = asyncio.run(run_comparison(question))
+        # 이후 비교/선택 로직 추가 가능
+        # print(results)
+    else:
+        print("질문이 입력되지 않아 프로그램을 종료합니다.")
