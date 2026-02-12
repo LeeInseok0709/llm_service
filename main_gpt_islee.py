@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 from google import genai
 from openai import OpenAI
 
-
+print("이윤석 바보")
 # ----------------------------
 # 0) 환경 변수 / 클라이언트 초기화
 # ----------------------------
